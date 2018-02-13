@@ -26,4 +26,5 @@ SELECT [column], [column] FROM [table];
 // Capitilaztion is an industry standard to make queries easier to read.
 // Seperate column names with a comma when selecting multiple.
 
+/* Where Keyword for Conditional Selects */
 
