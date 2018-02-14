@@ -63,6 +63,7 @@ DELETE FROM table_name WHERE column = 'value';
 DELETE FROM scores WHERE score < 1000; --Be sure to have a WHERE statement on DELETE FROM; otherwise all rows will be deleted from the table.
 
 
+/***** PROBLEMS FROM DEVMOUNTAIN SQL 1 MINI PROJECT *****/
 /* 1. Find the average length of all tracks in Milliseconds */
 SELECT AVG(milliseconds) FROM TRACK; --We can use the AVG keyword in order to find the average of a given value.
 
