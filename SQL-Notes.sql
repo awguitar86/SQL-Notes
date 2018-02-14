@@ -61,3 +61,13 @@ UPDATE table_name SET column = 'value' WHERE username = 'darkblade01'; --there c
 /* DELETE */
 DELETE FROM table_name WHERE column = 'value';
 DELETE FROM scores WHERE score < 1000; --Be sure to have a WHERE statement on DELETE FROM; otherwise all rows will be deleted from the table.
+
+
+/* 1. Find the average length of all tracks in Milliseconds */
+SELECT AVG(milliseconds) FROM TRACK; --We can use the AVG keyword in order to find the average of a given value.
+
+/* 2. Find the number of invoices in the USA */
+
+
+/* 3. Make a list of all the First Names of Customers that contain an 'a' */
+SELECT FirstName FROM Customer WHERE FirstName LIKE '%a%'; --The LIKE command does a search in the text, and the % on both sides of the value searches for that value in the text.
