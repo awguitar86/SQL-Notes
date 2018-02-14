@@ -79,10 +79,11 @@ SELECT * FROM Track ORDER BY Milliseconds DESC LIMIT 10;  --If you want to sort 
 SELECT * FROM Track ORDER BY Milliseconds LIMIT 20; --The ORDER BY keyword by default is ina ascending order. 
 
 /* 6. Find all the customers that live in California or Washington */
-
+SELECT * FROM Customer WHERE State = 'CA' OR State = 'WA';
+SELECT * FROM Customer WHERE State IN ('CA', 'WA'); --Using the WHERE clause, we can find rows where a value is IN a list of several possible values. 
 
 /* 7. Find all the customers that live in California, Washington, Utah, Florida, or Arizona (Use IN keyword) */
-
+SELECT * FROM Customer WHERE State IN ('CA', 'WA', 'UT', 'FL', 'AZ');
 
 /* 8. Insert an artist to the database */
 
