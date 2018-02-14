@@ -76,7 +76,7 @@ SELECT FirstName FROM Customer WHERE FirstName LIKE '%a%'; --The LIKE command do
 SELECT * FROM Track ORDER BY Milliseconds DESC LIMIT 10;  --If you want to sort the rows by some kind of attribute, you can use the ORDER BY keyword. In order to put the names in descending order, you would add a DESC at the end of the query.
 
 /* 5. Make a list of the 20 shortest tracks */
-
+SELECT * FROM Track ORDER BY Milliseconds LIMIT 20; --The ORDER BY keyword by default is ina ascending order. 
 
 /* 6. Find all the customers that live in California or Washington */
 
