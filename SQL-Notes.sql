@@ -89,7 +89,8 @@ SELECT * FROM Customer WHERE State IN ('CA', 'WA', 'UT', 'FL', 'AZ');
 INSERT INTO Artist (ArtistId, Name) VALUES (276, 'Thrice');
 
 /* 9. Insert yourself as a customer to the database */
-
+INSERT INTO Customer ( CustomerId, FirstName, LastName, Company, Address, City, State, Country, PostalCode, Phone, Fax, Email, SupportRepId )
+VALUES ( 60, 'Austin', 'Wright', 'SWD', '777 Heaven Ave.', 'Provo', 'UT', 'USA', '77777', '+1 (801)777-1234', 'null', 'mrheaven@gmail.com', 7 );
 
 /* 10. Find a list of all Playlists that start with Classical */
 
