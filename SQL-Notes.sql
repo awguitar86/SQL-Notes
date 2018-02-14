@@ -67,7 +67,28 @@ DELETE FROM scores WHERE score < 1000; --Be sure to have a WHERE statement on DE
 SELECT AVG(milliseconds) FROM TRACK; --We can use the AVG keyword in order to find the average of a given value.
 
 /* 2. Find the number of invoices in the USA */
-
+SELECT COUNT(*) FROM Invoice WHERE BillingCountry = 'USA';
 
 /* 3. Make a list of all the First Names of Customers that contain an 'a' */
 SELECT FirstName FROM Customer WHERE FirstName LIKE '%a%'; --The LIKE command does a search in the text, and the % on both sides of the value searches for that value in the text.
+
+/* 4. Make a list of the 10 longest tracks */
+
+
+/* 5. Make a list of the 20 shortest tracks */
+
+
+/* 6. Find all the customers that live in California or Washington */
+
+
+/* 7. Find all the customers that live in California, Washington, Utah, Florida, or Arizona (Use IN keyword) */
+
+
+/* 8. Insert an artist to the database */
+
+
+/* 9. Insert yourself as a customer to the database */
+
+
+/* 10. Find a list of all Playlists that start with Classical */
+
