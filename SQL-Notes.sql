@@ -86,7 +86,7 @@ SELECT * FROM Customer WHERE State IN ('CA', 'WA'); --Using the WHERE clause, we
 SELECT * FROM Customer WHERE State IN ('CA', 'WA', 'UT', 'FL', 'AZ');
 
 /* 8. Insert an artist to the database */
-
+INSERT INTO Artist (ArtistId, Name) VALUES (276, 'Thrice');
 
 /* 9. Insert yourself as a customer to the database */
 
