@@ -93,4 +93,4 @@ INSERT INTO Customer ( CustomerId, FirstName, LastName, Company, Address, City, 
 VALUES ( 60, 'Austin', 'Wright', 'SWD', '777 Heaven Ave.', 'Provo', 'UT', 'USA', '77777', '+1 (801)777-1234', 'null', 'mrheaven@gmail.com', 7 );
 
 /* 10. Find a list of all Playlists that start with Classical */
-
+SELECT * FROM Playlist WHERE Name LIKE 'Classical%';  --The percentage at the end of the value you're searching for means that value is at the beginning or start with that value.
