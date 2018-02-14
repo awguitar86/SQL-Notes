@@ -73,7 +73,7 @@ SELECT COUNT(*) FROM Invoice WHERE BillingCountry = 'USA';
 SELECT FirstName FROM Customer WHERE FirstName LIKE '%a%'; --The LIKE command does a search in the text, and the % on both sides of the value searches for that value in the text.
 
 /* 4. Make a list of the 10 longest tracks */
-
+SELECT * FROM Track ORDER BY Milliseconds DESC LIMIT 10;  --If you want to sort the rows by some kind of attribute, you can use the ORDER BY keyword. In order to put the names in descending order, you would add a DESC at the end of the query.
 
 /* 5. Make a list of the 20 shortest tracks */
 
