@@ -104,3 +104,21 @@ SELECT c.name, c.email, o.total, o.date
 SELECT c.name, c.email, o.total, o.date
     FROM customers c, orders o
     WHERE c.id = o.customer_id; --You can also forgo the AS and put the alias after a space.
+
+
+/* Partial Matches */
+--With LIKE, you can use wildcard symbols to make your searches more flexible.
+SELECT * FROM movies
+    WHERE title LIKE 'm%';
+
+SELECT * FROM movies
+    WHERE title LIKE 'a%'; -- % (percent) can match a string of any number of characters.
+
+SELECT * FROM movies
+    WHERE title LIKE '200_'; -- _ (underscore) can match a single character
+
+
+/* SUBQUERIES */
+SELECT name FROM cities -- you can use subqueries to filter rows based on information found on other tables without using a join
+    WHERE state_id IN (SELECT id FROM states --use IN and place the subquery in parentheses.
+        WHERE statehood > 1850);
