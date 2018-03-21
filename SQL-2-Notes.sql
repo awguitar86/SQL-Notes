@@ -86,7 +86,7 @@ SELECT * FROM cities, states
     WHERE cities.state_id = states.id; -- Inner joins - the most common - can be written with a where statement.
 
 SELECT cities.name, states.name
-    FROM cities --write only the first table in from, then specify which tasble, and the column pair to join.
+    FROM cities --write only the first table in from, then specify which table, and the column pair to join.
     INNER JOIN states ON cities.state_id = states.id;
 
 SELECT cities.name, states.name
