@@ -7,7 +7,7 @@
 /* Primary Keys */
 -- Any one column assigned to identity each row; must be unique and constant.
 -- Using an ID column is a very common solution - makes it easy to connect with other tables.
--- The email or username can also be used as the primary key, but there can be problems with that. 
+-- The email or username can also be used as the primary key, but there can be problems with that.
 -- Using an ID as the primary key allows other columns to be the same, while having a unique key for each item.
 
 /* Schemas */
@@ -15,7 +15,7 @@
 -- The layout of a table; includes column names, data types, and modifiers (like primary key and foreign keys).
 
 /* Select Statments */
--- Are our primary mechanism to help us pull information out of databases. 
+-- Are our primary mechanism to help us pull information out of databases.
 -- Another term for select statments is query. Always terminate statments with semi-colons.
 
 SELECT * FROM [table]; -- !!be sure to end each query with a semicolon!!
@@ -28,7 +28,7 @@ SELECT [column], [column] FROM [table];
 
 /* WHERE Keyword for Conditional Selects */
 SELECT * FROM [table] WHERE [column] < [number];
-SELECT * FROM cities WHERE population < 1000000; 
+SELECT * FROM cities WHERE population < 1000000;
 SELECT * FROM cities WHERE name = 'Chicago'; -- a property in database has to be rapped in single quotes only. And properties are case sensitive.
 /* Logical Operators */
 --      >       Greater Than
@@ -43,20 +43,20 @@ SELECT * FROM cities WHERE population > 1000000 AND name = 'San Diego' OR state_
 SELECT * FROM cities WHERE name LIKE 'chicago'; --use LIKE keyword instead of operator to do kind of a search where the property is not case sensitive.
 /* IS NULL and IS NOT NULL */
 SELECT * FROM cities WHERE name IS NULL;    --must use IS instead of a logical operator when using NULL or NOT NULL
-SELECT * FROM cities WHERE name IS NOT NULL; 
+SELECT * FROM cities WHERE name IS NOT NULL;
 /* BETWEEN */
 SELECT * FROM cities WHERE founded BETWEEN 1800 AND 1900; --finds the rows that are between those years in column founded
 /* IN/NOT IN */
-SELECT * FROM cities WHERE state_id IN (3, 4); --this is kind of like an array, where it will only return the rows in the table that have the state_id of 3 or 4 or whatever other numbers are in there. 
+SELECT * FROM cities WHERE state_id IN (3, 4); --this is kind of like an array, where it will only return the rows in the table that have the state_id of 3 or 4 or whatever other numbers are in there.
 SELECT * FROM cities WHERE state_id NOT IN (3, 4); --this returns all the rows in the table that do not have the numbers in the parenthesis.
 
 /* Adding, Updating, and Removing */
 /* ADDING */
-INSERT INTO table_name (name, family); --This is how you add to a table. Inside the parenthisis is what the column names will be.
+INSERT INTO table_name (name, family) --This is how you add to a table. Inside the parenthisis is what the column names will be.
 VALUES ('Berber', 'Afroasiatic'); --This will be the actual values we will want to put inside that row.
 /* UPDATING */
 UPDATE table_name SET column = 'value'; --Be sure to include a WHERE statement; otherwise all rows will be updated.
-UPDATE table_name SET column = 'value' WHERE id = 5; --To only update a value in a column you use the WHERE statment. 
+UPDATE table_name SET column = 'value' WHERE id = 5; --To only update a value in a column you use the WHERE statment.
 UPDATE table_name SET column = 'value' WHERE username = 'darkblade01'; --there could be two of the same usernames in the table, so it's alwasy best to use the primary key in the WHERE statment to update.
 /* DELETE */
 DELETE FROM table_name WHERE column = 'value';
@@ -77,11 +77,11 @@ SELECT FirstName FROM Customer WHERE FirstName LIKE '%a%'; --The LIKE command do
 SELECT * FROM Track ORDER BY Milliseconds DESC LIMIT 10;  --If you want to sort the rows by some kind of attribute, you can use the ORDER BY keyword. In order to put the names in descending order, you would add a DESC at the end of the query.
 
 /* 5. Make a list of the 20 shortest tracks */
-SELECT * FROM Track ORDER BY Milliseconds LIMIT 20; --The ORDER BY keyword by default is ina ascending order. 
+SELECT * FROM Track ORDER BY Milliseconds LIMIT 20; --The ORDER BY keyword by default is ina ascending order.
 
 /* 6. Find all the customers that live in California or Washington */
 SELECT * FROM Customer WHERE State = 'CA' OR State = 'WA';
-SELECT * FROM Customer WHERE State IN ('CA', 'WA'); --Using the WHERE clause, we can find rows where a value is IN a list of several possible values. 
+SELECT * FROM Customer WHERE State IN ('CA', 'WA'); --Using the WHERE clause, we can find rows where a value is IN a list of several possible values.
 
 /* 7. Find all the customers that live in California, Washington, Utah, Florida, or Arizona (Use IN keyword) */
 SELECT * FROM Customer WHERE State IN ('CA', 'WA', 'UT', 'FL', 'AZ');
